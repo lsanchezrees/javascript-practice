@@ -4,3 +4,6 @@
 function firstMessage() {
 	document.getElementById("dogMsg").innerHTML ="Dogs rule; Cats drool!";
 }
+function secondMessage() {
+	document.getElementById("lucy").style.visibility="visible";
+}

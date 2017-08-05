@@ -7,8 +7,10 @@
 	</head>
 	<body>
 		<h1>My javascript file</h1>
-		<button type="button" onclick="firstMessage();">Why don't you click here?</button>
-		<div id="dogMsg"></div>
+		<div class="center"><button type="button" onclick="firstMessage();">Why don't you click here?</button></div>
+		<div><h2 id="dogMsg"></h2></div>
+		<button type="button" onclick="secondMessage();">I dare you to click here</button>
+		<div class="pix"><p><img id="lucy" src="images/lucy3.jpg" alt="Lucy"></p></div>
 
 
 

@@ -1,0 +1,18 @@
+* {
+	margin: 0;
+}
+
+html {
+	margin: 1rem;
+}
+.pix {
+	margin:  3rem;
+	padding: 3rem;
+}
+
+.center {
+	margin: 1rem auto;
+}
+img {
+	visibility: hidden;
+}
