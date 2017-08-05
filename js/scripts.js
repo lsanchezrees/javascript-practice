@@ -7,3 +7,8 @@ function firstMessage() {
 function secondMessage() {
 	document.getElementById("lucy").style.visibility="visible";
 }
+
+function jeopardyQuestion() {
+	document.getElementById("duck").style.visibility="visible";
+	document.getElementById("question").innerHTML="Q: What is something you should never tell a family member about because you might end up with one in your bathtub?"
+}
