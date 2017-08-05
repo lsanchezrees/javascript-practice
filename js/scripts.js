@@ -10,7 +10,7 @@ function secondMessage() {
 
 function jeopardyQuestion() {
 	document.getElementById("duck").style.visibility="visible";
-	document.getElementById("question").innerHTML="Q: What is something you should never tell a family member about because you might end up with one in your bathtub?"
+	document.getElementById("question").innerHTML="Q: What is something you should never tell a family member about because you might end up with one in your bathtub?";
 	document.getElementById("question").style.fontWeight="bold";
 	document.getElementById("question").style.backgroundColor="yellow";
 }
