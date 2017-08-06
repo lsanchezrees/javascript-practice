@@ -33,17 +33,21 @@
 
 		<!--link to js file-->
 		<script type="text/javascript" src="js/scripts.js"></script>
+
 		<title>JavaScript Practice</title>
 	</head>
 
 	<body>
 		<div class="container">
 			<h1 class="text-center">My javascript file</h1>
+			<!--first message button-->
 			<div class="row">
 				<div class="col-md-12 text-center">
 		<button type="button" onclick="firstMessage();">Why don't you click here?</button>
 				</div><!--column-->
 			</div><!--row-->
+
+			<!--second message button-->
 			<div class="row">
 				<div class="col-md-12 text-center">
 		<div><h2 id="dogMsg"></h2></div>
@@ -56,20 +60,29 @@
 				</div><!--column-->
 			</div><!--row-->
 
-		<h2 class="text-center">Let's Play Jeopardy!</h2>
+			<!--div for map and button-->
 			<div class="row">
+				<div class="col-md-12 text-center">
+			<p><button type="button" onclick="showBestPets();">Who are the best pets?</button></p>
+					<ol id="pets"></ol>
+				</div><!--column-->
+			</div><!--row-->
+
+			<!--jeopardy section-->
+		<h2 class="text-center">Let's Play Jeopardy!</h2>
+			<div class="row jeopardy">
 				<div class="col-md-12 text-center">
 		<div class="pix text-center"><p>A:  A giant duck</p>
 		</div><!--column-->
 				</div><!--row-->
 
-				<div class="row">
+				<div class="row jeopardy">
 					<div class="col-md-12 text-center">
-			<label for="answer">Enter your best guess for the question: </label><input type="text" id="answer" value="" />
+			<label for="answer">Enter your best guess for the question: &nbsp;</label><input type="text" id="answer" value="" />
 					</div><!--column-->
 				</div><!--row-->
 
-				<div class="row">
+				<div class="row jeopardy">
 					<div class="col-md-12 text-center">
 			<button type="button" onclick="jeopardyQuestion();">Click for the question</button><br><br>
 					</div><!--column-->
