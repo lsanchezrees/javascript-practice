@@ -11,7 +11,7 @@ function secondMessage() {
 function jeopardyQuestion() {
 
 	document.getElementById("duck").style.visibility="visible";
-	document.getElementById("question").innerHTML="No, '" + document.getElementById("answer").value + "' is not the right answer. The correct one is:<br><br>Q: What is something you should never tell a family member about because you might end up with one in your bathtub?";
+	document.getElementById("question").innerHTML="No, '" + document.getElementById("answer").value + "' is not the right question. The correct one is:<br><br>Q: What is something you should never tell a family member about because you might end up with one in your bathtub?";
 	document.getElementById("question").style.fontWeight="bold";
 	document.getElementById("question").style.backgroundColor="yellow";
 }
