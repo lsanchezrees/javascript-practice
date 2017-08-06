@@ -1,6 +1,9 @@
 /**
  * Created by Leonora on 8/5/2017.
  */
+/* I spent half a day trying to add jquery to my file,  but
+could never get it to work with external files */
+
 function firstMessage() {
 	document.getElementById("dogMsg").innerHTML ="Dogs rule; Cats drool!";
 }
