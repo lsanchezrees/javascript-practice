@@ -93,6 +93,15 @@
 		<p id="question"></p></div>
 						</div><!--column-->
 			</div><!--row-->
+
+			<!--bacon goes here-->
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<input id="baconButton" type="button" value="Give me bacon">
+					<div id="baconIpsumOutput"></div>
+
+				</div><!--column-->
+			</div><!--row-->
 		</div><!--container-->
 
 

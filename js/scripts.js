@@ -23,6 +23,33 @@ function showBestPets() {
 	document.getElementById("pets").style.fontSize="2rem";
 }
 
+/*bacon function copied directly from https://baconipsum.com/json-api/
+* Additional styling added to format text */
+$(document).ready(function()
+{
+	$("#baconButton").click(function()
+	{
+		$.getJSON('https://baconipsum.com/api/?callback=?',
+			{ 'type':'meat-and-filler', 'start-with-lorem':'1', 'paras':'3' },
+			function(baconGoodness)
+			{
+				if (baconGoodness && baconGoodness.length > 0)
+				{
+					$("#baconIpsumOutput").html('');
+					for (var i = 0; i < baconGoodness.length; i++)
+						$("#baconIpsumOutput").append('<p>' + baconGoodness[i] + '</p>');
+					document.getElementById("baconIpsumOutput").style.fontSize="2rem";
+					document.getElementById("baconIpsumOutput").style.borderColor="gray";
+					document.getElementById("baconIpsumOutput").style.borderStyle="solid";
+					document.getElementById("baconIpsumOutput").style.borderWeight="0.5rem";
+
+
+
+					$("#baconIpsumOutput").show();
+				}
+			});
+	});
+});
 
 
 

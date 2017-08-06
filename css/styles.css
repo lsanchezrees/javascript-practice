@@ -18,7 +18,7 @@ img {
 	padding: 1rem;
 }
 
-button {
+button, #baconButton {
 	font-size: 2rem;
 	margin: 2rem;
 }
