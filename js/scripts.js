@@ -60,7 +60,7 @@ function jeopardyQuestion() {
 	var answerValue = document.getElementById("answer").value;
 	var response = "";
 		if (answerValue === "What is something you should never tell a family member about because you might end up with one in your bathtub?") {
-		response = "Wow, you are clever!";
+		response = "Wow, you are so clever!  Copy and paste are very advanced functions!";
 	} else {
 		response = "No, '" + answerValue + "' is not the right question. The correct one is:<br><br>Q: What is something you should never tell a family member about because you might end up with one in your bathtub?";
 	}
