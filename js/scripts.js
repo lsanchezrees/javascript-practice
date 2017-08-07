@@ -57,9 +57,17 @@ $(document).ready(function()
 
 
 function jeopardyQuestion() {
+	var answerValue = document.getElementById("answer").value;
+	var response = "";
+		if (answerValue === "What is something you should never tell a family member about because you might end up with one in your bathtub?") {
+		response = "Wow, you are clever!";
+	} else {
+		response = "No, '" + answerValue + "' is not the right question. The correct one is:<br><br>Q: What is something you should never tell a family member about because you might end up with one in your bathtub?";
+	}
+
 
 	document.getElementById("duck").style.visibility="visible";
-	document.getElementById("question").innerHTML="No, '" + document.getElementById("answer").value + "' is not the right question. The correct one is:<br><br>Q: What is something you should never tell a family member about because you might end up with one in your bathtub?";
+	document.getElementById("question").innerHTML=response;
 	document.getElementById("question").style.fontWeight="bold";
 	document.getElementById("question").style.backgroundColor="yellow";
 }
