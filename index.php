@@ -64,7 +64,7 @@
 
 			<!--div for map and button-->
 			<div class="row">
-				<div class="col-md-12 text-center">
+				<div class="col-md-6 col-md-offset-3 text-center">
 			<p><button type="button" onclick="showBestPets();">Who are the best pets?</button></p>
 					<ol id="pets"></ol>
 				</div><!--column-->
