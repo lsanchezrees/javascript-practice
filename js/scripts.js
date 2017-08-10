@@ -83,9 +83,6 @@ function getJsonData() {
 function renderHTML(data) {
 	var jsonContainer = document.getElementById("jsonData");
 	var htmlString = "";
-
-	console.log(data[0]);
-	console.log(data[0].name);
 	for (i=0; i < data.length; i++) {
 		htmlString = htmlString + "<p>" + data[i].name + " is a " + data[i].species + ".</p>";
 	}
