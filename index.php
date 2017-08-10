@@ -107,6 +107,15 @@
 			</div><!--row-->
 		</div><!--container-->
 
+		<!--ajax call goes here-->
+		<div class="row">
+			<div class="col-md-12 text-center">
+				<button id="getJson" onclick="getJsonData();">Click this button</button>
+				<div id="jsonData"></div>
+
+			</div><!--column-->
+		</div><!--row-->
+		</div><!--container-->
 
 	</body>
 </html>

@@ -4,6 +4,7 @@
 /* I spent half a day trying to add jquery to my file,  but
 could never get it to work with external files */
 
+
 function firstMessage() {
 	document.getElementById("dogMsg").innerHTML ="Dogs rule; Cats drool!";
 }
@@ -26,35 +27,6 @@ function showBestPets() {
 	document.getElementById("pets").style.fontSize="2rem";
 }
 
-/*bacon function copied directly from https://baconipsum.com/json-api/
-* Additional styling added to format text */
-$(document).ready(function()
-{
-	$("#baconButton").click(function()
-	{
-		$.getJSON('https://baconipsum.com/api/?callback=?',
-			{ 'type':'meat-and-filler', 'start-with-lorem':'1', 'paras':'3' },
-			function(baconGoodness)
-			{
-				if (baconGoodness && baconGoodness.length > 0)
-				{
-					$("#baconIpsumOutput").html('');
-					for (var i = 0; i < baconGoodness.length; i++)
-						$("#baconIpsumOutput").append('<p>' + baconGoodness[i] + '</p>');
-					document.getElementById("baconIpsumOutput").style.fontSize="2rem";
-					document.getElementById("baconIpsumOutput").style.borderColor="gray";
-					document.getElementById("baconIpsumOutput").style.borderStyle="solid";
-					document.getElementById("baconIpsumOutput").style.borderWeight="0.5rem";
-
-
-
-					$("#baconIpsumOutput").show();
-				}
-			});
-	});
-});
-
-
 
 function jeopardyQuestion() {
 	var answerValue = document.getElementById("answer").value;
@@ -72,9 +44,55 @@ function jeopardyQuestion() {
 	document.getElementById("question").style.backgroundColor="yellow";
 }
 
+/*bacon function copied directly from https://baconipsum.com/json-api/
+ * Additional styling added to format text */
+$(document).ready(function()
+{
+	$("#baconButton").click(function() {
+		$.getJSON('https://baconipsum.com/api/?callback=?',
+			{ 'type':'meat-and-filler', 'start-with-lorem':'1', 'paras':'3' },
+			function(baconGoodness) {
+				if (baconGoodness && baconGoodness.length > 0) {
+					$("#baconIpsumOutput").html('');
+					for (var i = 0; i < baconGoodness.length; i++)
+						$("#baconIpsumOutput").append('<p>' + baconGoodness[i] + '</p>');
+					document.getElementById("baconIpsumOutput").style.fontSize="2rem";
+					document.getElementById("baconIpsumOutput").style.borderColor="gray";
+					document.getElementById("baconIpsumOutput").style.borderStyle="solid";
+					document.getElementById("baconIpsumOutput").style.borderWeight="0.5rem";
+					$("#baconIpsumOutput").show();
+				}
+			});
+	});
+});
 
+//https://learnwebcode.github.io/json-example/animals-1.json
 
-function reloadWindow() {
-	document.getElementById("answer").value ="";
+function getJsonData() {
+	var dogs = document.getElementById("jsonData");
+	var newRequest = new XMLHttpRequest();
+	newRequest.open('GET','https://learnwebcode.github.io/json-example/animals-1.json');
+	newRequest.onload = function() {
+		var ourData = JSON.parse(newRequest.responseText);
+		console.log(ourData[0]);
+		renderHTML(ourData);
+	};
+	newRequest.send();
 }
-window.onload=reloadWindow();
+
+function renderHTML(data) {
+	var jsonContainer = document.getElementById("jsonData");
+	var htmlString = "";
+
+	console.log(data[0]);
+	console.log(data[0].name);
+	for (i=0; i < data.length; i++) {
+		htmlString = htmlString + "<p>" + data[i].name + " is a " + data[i].species + ".</p>";
+	}
+	jsonContainer.insertAdjacentHTML('beforeend',htmlString);
+
+
+
+
+}
+

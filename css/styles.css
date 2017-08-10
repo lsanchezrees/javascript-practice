@@ -25,3 +25,6 @@ button, #baconButton {
 .jeopardy {
 	font-size: 2rem;
 }
+#dogJson {
+	border: solid 0.5rem red;
+}
