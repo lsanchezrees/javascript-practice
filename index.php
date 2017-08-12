@@ -39,7 +39,7 @@
 		<title>JavaScript Practice</title>
 	</head>
 
-	<body>
+	<body onload="jeopardyAnswer('A giant duck');">
 		<div class="container">
 			<h1 class="text-center">My javascript file</h1>
 			<!--first message button-->
@@ -74,7 +74,7 @@
 		<h2 class="text-center">Let's Play Jeopardy!</h2>
 			<div class="row jeopardy">
 				<div class="col-md-12 text-center">
-		<div class="pix text-center" id="originalAnswer" onload="jeopardyAnswer();"><p>A:  A giant duck</p>
+		<div class="pix text-center" id="originalAnswer">
 		</div><!--column-->
 				</div><!--row-->
 
@@ -112,10 +112,14 @@
 			<div class="col-md-12 text-center">
 				<button id="getJson" onclick="getJsonData();">Click this button</button>
 				<div id="jsonData"></div>
-
-			</div><!--column-->
+				</div><!--column-->
 		</div><!--row-->
+
+
+
+
 		</div><!--container-->
+
 
 	</body>
 </html>
