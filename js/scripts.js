@@ -27,14 +27,15 @@ function showBestPets() {
 	document.getElementById("pets").style.fontSize="2rem";
 }
 
-
+/*setting up closures, and add jeopardy answer and question on page load, so they can potentially change each time.  This example will still use the original question and answer */
 function jeopardyQuestion() {
+	var correctResponse = "What is something you should never tell a family member about because you might end up with one in your bathtub?";
 	var answerValue = document.getElementById("answer").value;
 	var response = "";
-		if (answerValue === "What is something you should never tell a family member about because you might end up with one in your bathtub?") {
+		if (answerValue == correctResponse) {
 		response = "Wow, you are so clever!  Copy and paste are very advanced functions!";
 	} else {
-		response = "No, '" + answerValue + "' is not the right question. The correct one is:<br><br>Q: What is something you should never tell a family member about because you might end up with one in your bathtub?";
+		response = "No, '" + answerValue + "' is not the right question. The correct one is:<br><br>Q: " + correctResponse;
 	}
 
 
@@ -43,6 +44,16 @@ function jeopardyQuestion() {
 	document.getElementById("question").style.fontWeight="bold";
 	document.getElementById("question").style.backgroundColor="yellow";
 }
+
+
+function jeopardyAnswer() {
+	document.getElementById("originalAnswer").innerHTML="A: A giant duck";
+
+}
+
+
+
+
 
 /*bacon function copied directly from https://baconipsum.com/json-api/
  * Additional styling added to format text */

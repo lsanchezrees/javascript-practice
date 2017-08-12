@@ -74,7 +74,7 @@
 		<h2 class="text-center">Let's Play Jeopardy!</h2>
 			<div class="row jeopardy">
 				<div class="col-md-12 text-center">
-		<div class="pix text-center"><p>A:  A giant duck</p>
+		<div class="pix text-center" id="originalAnswer" onload="jeopardyAnswer();"><p>A:  A giant duck</p>
 		</div><!--column-->
 				</div><!--row-->
 
@@ -86,7 +86,7 @@
 
 				<div class="row jeopardy">
 					<div class="col-md-12 text-center">
-			<button type="button" onclick="jeopardyQuestion();">Click for the question</button><br><br>
+			<button type="button" onclick="jeopardyQuestion();">Click here for the question</button><br><br>
 					</div><!--column-->
 				</div><!--row-->
 						<div class="row">
